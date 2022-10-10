@@ -1,0 +1,18 @@
+#include <math.h>
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int maxprofit = 0;
+        int minsofar=prices[0];
+        
+        for(int i =0; i<prices.size(); i++){
+            minsofar = std::min(minsofar,prices[i]);
+            int profit = prices[i] - minsofar;
+            maxprofit = std::max(maxprofit, profit);
+        }
+        return maxprofit;
+    }
+    
+    
+};
