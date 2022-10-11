@@ -9,10 +9,10 @@ public:
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
 					if(a[i][j] == 0){   // store rows and cols state in first row and col
-                    if(i==0) firstRow = true;
-                    if(j==0) firstCol = true;
-                    a[i][0] = 0;
-                    a[0][j] = 0;
+                        if(i==0) firstRow = true;
+                        if(j==0) firstCol = true;
+                        a[i][0] = 0;
+                        a[0][j] = 0;
                 }
             }
         }
