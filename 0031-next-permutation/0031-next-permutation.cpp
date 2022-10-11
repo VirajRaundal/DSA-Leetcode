@@ -1,27 +1,31 @@
 class Solution {
+    
+    /*Step 1: From behind, find index1 such that a[i]<a[i+1]
+      Step 2: From behind, find index2 such that a[index2]>a[index1]
+      Step 3: swap(a[index1], a[index2])
+      Step 4: reverse(index1, last)*/
 public:
     void nextPermutation(vector<int>& nums) {
+        
         int idx = -1;
         int n = nums.size();
         
-        for(int i = n-1; i>0; i--){
+        for(int i = n-1; i>0; i--)
             if(nums[i]>nums[i-1]){
                 idx = i;
                 break;
             }
-        }
         
         if(idx == -1)
             reverse(nums.begin(), nums.end());
         
         else{
             int prev = idx;
-            for(int i = idx+1; i<n; i++){
+            for(int i = idx+1; i<n; i++)
                 if(nums[i]>nums[idx-1] && nums[i]<=nums[prev])
                     prev = i;
-            }
-            swap(nums[idx-1], nums[prev]);
             
+            swap(nums[idx-1], nums[prev]);
             reverse(nums.begin()+idx, nums.end());
         }
     }
