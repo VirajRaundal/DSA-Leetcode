@@ -2,7 +2,8 @@ class Solution {
 public:
     
     int merge(vector<int> &nums, int low, int mid, int high){
-        int cnt = 0;
+
+        int cnt = 0; //Count variable
         int j = mid+1;
         for(int i = low; i<=mid; i++){
             while(j<=high && nums[i]>2LL*nums[j])
