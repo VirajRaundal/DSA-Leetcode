@@ -2,6 +2,8 @@ class Solution {
 public:
     int romanToInt(string s) {
         int num = 0;
+        
+        //Looping through the string
         for(int i = 0; i<s.length(); i++)
         {
             if(s[i]=='I'){
