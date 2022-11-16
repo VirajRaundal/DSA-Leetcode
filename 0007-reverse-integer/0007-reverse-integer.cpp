@@ -2,6 +2,7 @@ class Solution {
 public:
     int reverse(int x) {
         
+        //Reversing an integer
         if(x<=INT_MIN || x>=INT_MAX){
             return 0;
         }
