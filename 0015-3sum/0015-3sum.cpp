@@ -16,7 +16,7 @@ public:
                         temp.push_back(nums[i]);
                         res.push_back(temp);
                         
-                        while(low<high && nums[low]==nums[low+1]) low++;
+                        while(low<high && nums[low]==nums[low+1]) low++;//
                         while(low<high && nums[high]==nums[high-1]) high--;
                         
                         low++;
